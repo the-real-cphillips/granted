@@ -527,7 +527,7 @@ func AssumeCommand(c *cli.Context) error {
 				profileName = profile.Name + "-" + cfg.ExportCredentialSuffix
 
 			} else {
-				profileName = profile.Name
+				profileName = "default"
 				clio.Warn("No credential suffix found. This can cause issues with using exported credentials if conflicting profiles exist. Run `granted settings export-suffix set` to set one.")
 			}
 
